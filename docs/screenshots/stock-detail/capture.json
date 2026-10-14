@@ -1,0 +1,330 @@
+{
+  "browser": "151.0.7922.34",
+  "errors": [],
+  "models": [
+    {
+      "id": "basalt_spires",
+      "name": "Basalt organ pipes",
+      "vertices": 31784,
+      "triangles": 10954,
+      "textureSize": 512,
+      "cutoutSize": null,
+      "alphaCutoff": 0,
+      "shadows": true
+    },
+    {
+      "id": "layered_sandstone",
+      "name": "Wind-carved sandstone",
+      "vertices": 36122,
+      "triangles": 16558,
+      "textureSize": 512,
+      "cutoutSize": null,
+      "alphaCutoff": 0,
+      "shadows": true
+    },
+    {
+      "id": "glacial_shard",
+      "name": "Blue glacial shards",
+      "vertices": 38683,
+      "triangles": 12950,
+      "textureSize": 512,
+      "cutoutSize": null,
+      "alphaCutoff": 0,
+      "shadows": true
+    },
+    {
+      "id": "wind_pine",
+      "name": "Windward pine",
+      "vertices": 103547,
+      "triangles": 60486,
+      "textureSize": 512,
+      "cutoutSize": 512,
+      "alphaCutoff": 0.4,
+      "shadows": true
+    },
+    {
+      "id": "umbrella_tree",
+      "name": "Savanna umbrella",
+      "vertices": 36391,
+      "triangles": 26996,
+      "textureSize": 512,
+      "cutoutSize": 512,
+      "alphaCutoff": 0.4,
+      "shadows": true
+    },
+    {
+      "id": "alien_lantern",
+      "name": "Amber lantern plant",
+      "vertices": 20720,
+      "triangles": 20368,
+      "textureSize": 512,
+      "cutoutSize": null,
+      "alphaCutoff": 0,
+      "shadows": true
+    },
+    {
+      "id": "ribbon_fern",
+      "name": "Violet ribbon fern",
+      "vertices": 25644,
+      "triangles": 22180,
+      "textureSize": 512,
+      "cutoutSize": null,
+      "alphaCutoff": 0,
+      "shadows": true
+    },
+    {
+      "id": "coral_fan",
+      "name": "Roseglass coral fan",
+      "vertices": 48419,
+      "triangles": 30478,
+      "textureSize": 512,
+      "cutoutSize": null,
+      "alphaCutoff": 0,
+      "shadows": true
+    },
+    {
+      "id": "river_boulder",
+      "name": "Riverstone boulder",
+      "vertices": 4450,
+      "triangles": 5760,
+      "textureSize": 512,
+      "cutoutSize": null,
+      "alphaCutoff": 0,
+      "shadows": true
+    },
+    {
+      "id": "talus_cluster",
+      "name": "Scree talus",
+      "vertices": 34560,
+      "triangles": 11520,
+      "textureSize": 512,
+      "cutoutSize": null,
+      "alphaCutoff": 0,
+      "shadows": true
+    },
+    {
+      "id": "desert_arch",
+      "name": "Desert sandstone arch",
+      "vertices": 6596,
+      "triangles": 3312,
+      "textureSize": 512,
+      "cutoutSize": null,
+      "alphaCutoff": 0,
+      "shadows": true
+    },
+    {
+      "id": "lava_pebble",
+      "name": "Vesicular lava pebble",
+      "vertices": 15808,
+      "triangles": 5354,
+      "textureSize": 512,
+      "cutoutSize": null,
+      "alphaCutoff": 0,
+      "shadows": true
+    },
+    {
+      "id": "giant_redwood",
+      "name": "Giant redwood",
+      "vertices": 33219,
+      "triangles": 22448,
+      "textureSize": 512,
+      "cutoutSize": 512,
+      "alphaCutoff": 0.4,
+      "shadows": true
+    },
+    {
+      "id": "dwarf_juniper",
+      "name": "Dwarf juniper",
+      "vertices": 17274,
+      "triangles": 11076,
+      "textureSize": 512,
+      "cutoutSize": 512,
+      "alphaCutoff": 0.4,
+      "shadows": true
+    },
+    {
+      "id": "silver_birch",
+      "name": "Silver birch",
+      "vertices": 25670,
+      "triangles": 16952,
+      "textureSize": 512,
+      "cutoutSize": 512,
+      "alphaCutoff": 0.4,
+      "shadows": true
+    },
+    {
+      "id": "fan_palm",
+      "name": "Coastal fan palm",
+      "vertices": 17043,
+      "triangles": 10088,
+      "textureSize": 512,
+      "cutoutSize": null,
+      "alphaCutoff": 0,
+      "shadows": true
+    },
+    {
+      "id": "spiral_succulent",
+      "name": "Spiral succulent",
+      "vertices": 14519,
+      "triangles": 7724,
+      "textureSize": 512,
+      "cutoutSize": null,
+      "alphaCutoff": 0,
+      "shadows": true
+    },
+    {
+      "id": "trumpet_fungus",
+      "name": "Trumpet fungus colony",
+      "vertices": 20046,
+      "triangles": 10366,
+      "textureSize": 512,
+      "cutoutSize": null,
+      "alphaCutoff": 0,
+      "shadows": true
+    },
+    {
+      "id": "sail_pod",
+      "name": "Sail pod",
+      "vertices": 23544,
+      "triangles": 12198,
+      "textureSize": 512,
+      "cutoutSize": null,
+      "alphaCutoff": 0,
+      "shadows": true
+    },
+    {
+      "id": "glass_urchin",
+      "name": "Glass urchin",
+      "vertices": 2712,
+      "triangles": 1816,
+      "textureSize": 512,
+      "cutoutSize": null,
+      "alphaCutoff": 0,
+      "shadows": true
+    },
+    {
+      "id": "shell_grazer",
+      "name": "Shell grazer",
+      "vertices": 7576,
+      "triangles": 7236,
+      "textureSize": 512,
+      "cutoutSize": null,
+      "alphaCutoff": 0,
+      "shadows": true
+    },
+    {
+      "id": "meadow_grass",
+      "name": "Meadow grass",
+      "vertices": 1936,
+      "triangles": 968,
+      "textureSize": 512,
+      "cutoutSize": null,
+      "alphaCutoff": 0,
+      "shadows": true
+    },
+    {
+      "id": "dry_bunchgrass",
+      "name": "Dry bunchgrass",
+      "vertices": 5696,
+      "triangles": 2848,
+      "textureSize": 512,
+      "cutoutSize": null,
+      "alphaCutoff": 0,
+      "shadows": true
+    },
+    {
+      "id": "alien_ribbon_grass",
+      "name": "Alien ribbon grass",
+      "vertices": 2314,
+      "triangles": 1156,
+      "textureSize": 512,
+      "cutoutSize": null,
+      "alphaCutoff": 0,
+      "shadows": true
+    },
+    {
+      "id": "alien_spore_mat",
+      "name": "Alien spore mat",
+      "vertices": 3960,
+      "triangles": 3724,
+      "textureSize": 512,
+      "cutoutSize": null,
+      "alphaCutoff": 0,
+      "shadows": true
+    }
+  ],
+  "patches": [
+    {
+      "id": "meadow_grass",
+      "sizeM": 20,
+      "name": "Meadow grass scatter",
+      "drawn": 2465,
+      "lod": 4,
+      "triangles": 147900,
+      "summary": "Meadow grass · 20 × 20 m patch · 2465 drawn · ~5,108 estimated eligible · preview capped at 4096 · 4096 candidate samples · approximate distribution"
+    },
+    {
+      "id": "meadow_grass",
+      "sizeM": 5,
+      "name": "Meadow grass scatter",
+      "drawn": 316,
+      "lod": 2,
+      "triangles": 106176,
+      "summary": "Meadow grass · 5 × 5 m patch · 316 drawn · ~319 estimated eligible · approximate distribution"
+    },
+    {
+      "id": "dry_bunchgrass",
+      "sizeM": 20,
+      "name": "Dry bunchgrass scatter",
+      "drawn": 1702,
+      "lod": 3,
+      "triangles": 449328,
+      "summary": "Dry bunchgrass · 20 × 20 m patch · 1702 drawn · ~1,701 estimated eligible · approximate distribution"
+    },
+    {
+      "id": "dry_bunchgrass",
+      "sizeM": 5,
+      "name": "Dry bunchgrass scatter",
+      "drawn": 106,
+      "lod": 1,
+      "triangles": 170448,
+      "summary": "Dry bunchgrass · 5 × 5 m patch · 106 drawn · ~106 estimated eligible · approximate distribution"
+    },
+    {
+      "id": "alien_ribbon_grass",
+      "sizeM": 20,
+      "name": "Alien ribbon grass scatter",
+      "drawn": 1986,
+      "lod": 3,
+      "triangles": 278040,
+      "summary": "Alien ribbon grass · 20 × 20 m patch · 1986 drawn · ~1,989 estimated eligible · approximate distribution"
+    },
+    {
+      "id": "alien_ribbon_grass",
+      "sizeM": 5,
+      "name": "Alien ribbon grass scatter",
+      "drawn": 123,
+      "lod": 1,
+      "triangles": 83148,
+      "summary": "Alien ribbon grass · 5 × 5 m patch · 123 drawn · ~124 estimated eligible · approximate distribution"
+    },
+    {
+      "id": "alien_spore_mat",
+      "sizeM": 20,
+      "name": "Alien spore mat scatter",
+      "drawn": 703,
+      "lod": 2,
+      "triangles": 559588,
+      "summary": "Alien spore mat · 20 × 20 m patch · 703 drawn · ~707 estimated eligible · approximate distribution"
+    },
+    {
+      "id": "alien_spore_mat",
+      "sizeM": 5,
+      "name": "Alien spore mat scatter",
+      "drawn": 49,
+      "lod": 1,
+      "triangles": 89376,
+      "summary": "Alien spore mat · 5 × 5 m patch · 49 drawn · ~44 estimated eligible · approximate distribution"
+    }
+  ]
+}

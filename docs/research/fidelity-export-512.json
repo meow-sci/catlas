@@ -1,0 +1,9 @@
+{
+  "resolution": 512,
+  "body": "Earth",
+  "durationMs": 3649,
+  "assetCount": 42,
+  "bytes": 57777282,
+  "timerTicks": 177,
+  "maxTimerGapMs": 78
+}

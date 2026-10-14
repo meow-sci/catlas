@@ -1,0 +1,190 @@
+{
+  "browser": "151.0.7922.34",
+  "renderer": "Chromium SwiftShader; timings are local measurements, not hardware GPU benchmarks",
+  "reports": [
+    {
+      "scale": "compressed",
+      "body": "Mars",
+      "replacedBodies": 10,
+      "gpuCalls": {
+        "createTexture": 11,
+        "createBuffer": 85,
+        "deleteBuffer": 85,
+        "deleteTexture": 11
+      },
+      "longTasksMs": [
+        384,
+        162
+      ],
+      "slowTimers": [
+        {
+          "delayMs": 100,
+          "durationMs": 384.9
+        }
+      ],
+      "maxFrameGapMs": 433.5,
+      "cpuSelfMs": {
+        "palette (lib/procedural.ts)": 152.3,
+        "fbm (lib/procedural.ts)": 96.2,
+        "sampleSurface (lib/procedural.ts)": 50.5,
+        "craterSignal (lib/procedural.ts)": 27.2,
+        "noise3 (lib/procedural.ts)": 24,
+        "planetMesh (components/Viewport.tsx)": 23,
+        "bodyPosition (lib/orbits.ts)": 1.3,
+        "orbitPoint (lib/orbits.ts)": 1.3
+      }
+    },
+    {
+      "scale": "compressed",
+      "body": "Jupiter",
+      "replacedBodies": 10,
+      "gpuCalls": {
+        "createTexture": 11,
+        "createBuffer": 85,
+        "deleteBuffer": 85,
+        "deleteTexture": 11
+      },
+      "longTasksMs": [
+        391
+      ],
+      "slowTimers": [
+        {
+          "delayMs": 100,
+          "durationMs": 391.9
+        }
+      ],
+      "maxFrameGapMs": 442.6,
+      "cpuSelfMs": {
+        "palette (lib/procedural.ts)": 146.2,
+        "fbm (lib/procedural.ts)": 103.6,
+        "sampleSurface (lib/procedural.ts)": 62.5,
+        "craterSignal (lib/procedural.ts)": 25.3,
+        "planetMesh (components/Viewport.tsx)": 22.9,
+        "noise3 (lib/procedural.ts)": 18.8,
+        "App (App.tsx)": 1.3,
+        "dispose (components/Viewport.tsx)": 1.3
+      }
+    },
+    {
+      "scale": "compressed",
+      "body": "Luna",
+      "replacedBodies": 10,
+      "gpuCalls": {
+        "createTexture": 11,
+        "createBuffer": 85,
+        "deleteBuffer": 85,
+        "deleteTexture": 11
+      },
+      "longTasksMs": [
+        386
+      ],
+      "slowTimers": [
+        {
+          "delayMs": 100,
+          "durationMs": 386.7
+        }
+      ],
+      "maxFrameGapMs": 400,
+      "cpuSelfMs": {
+        "palette (lib/procedural.ts)": 143.1,
+        "fbm (lib/procedural.ts)": 105,
+        "sampleSurface (lib/procedural.ts)": 62.6,
+        "noise3 (lib/procedural.ts)": 24.3,
+        "craterSignal (lib/procedural.ts)": 21.4,
+        "planetMesh (components/Viewport.tsx)": 19.9,
+        "bodyPosition (lib/orbits.ts)": 1.3
+      }
+    },
+    {
+      "scale": "real",
+      "body": "Mars",
+      "replacedBodies": 10,
+      "gpuCalls": {
+        "createTexture": 11,
+        "createBuffer": 85,
+        "deleteBuffer": 85,
+        "deleteTexture": 11
+      },
+      "longTasksMs": [
+        388
+      ],
+      "slowTimers": [
+        {
+          "delayMs": 100,
+          "durationMs": 388.3
+        }
+      ],
+      "maxFrameGapMs": 434.2,
+      "cpuSelfMs": {
+        "palette (lib/procedural.ts)": 139,
+        "fbm (lib/procedural.ts)": 108.5,
+        "sampleSurface (lib/procedural.ts)": 57.6,
+        "craterSignal (lib/procedural.ts)": 35.4,
+        "planetMesh (components/Viewport.tsx)": 17.2,
+        "noise3 (lib/procedural.ts)": 16.3,
+        "bodyPosition (lib/orbits.ts)": 1.3,
+        "animate (components/Viewport.tsx)": 1.3
+      }
+    },
+    {
+      "scale": "real",
+      "body": "Jupiter",
+      "replacedBodies": 10,
+      "gpuCalls": {
+        "createTexture": 11,
+        "createBuffer": 85,
+        "deleteBuffer": 85,
+        "deleteTexture": 11
+      },
+      "longTasksMs": [
+        382
+      ],
+      "slowTimers": [
+        {
+          "delayMs": 100,
+          "durationMs": 382.8
+        }
+      ],
+      "maxFrameGapMs": 404.7,
+      "cpuSelfMs": {
+        "palette (lib/procedural.ts)": 150,
+        "fbm (lib/procedural.ts)": 109.3,
+        "sampleSurface (lib/procedural.ts)": 65.3,
+        "craterSignal (lib/procedural.ts)": 21.3,
+        "planetMesh (components/Viewport.tsx)": 16.3,
+        "noise3 (lib/procedural.ts)": 12.5
+      }
+    },
+    {
+      "scale": "real",
+      "body": "Luna",
+      "replacedBodies": 10,
+      "gpuCalls": {
+        "createTexture": 11,
+        "createBuffer": 85,
+        "deleteBuffer": 85,
+        "deleteTexture": 11
+      },
+      "longTasksMs": [
+        389
+      ],
+      "slowTimers": [
+        {
+          "delayMs": 100,
+          "durationMs": 389.9
+        }
+      ],
+      "maxFrameGapMs": 405.9,
+      "cpuSelfMs": {
+        "palette (lib/procedural.ts)": 151,
+        "fbm (lib/procedural.ts)": 103.8,
+        "sampleSurface (lib/procedural.ts)": 54.1,
+        "craterSignal (lib/procedural.ts)": 31.1,
+        "planetMesh (components/Viewport.tsx)": 19.5,
+        "noise3 (lib/procedural.ts)": 17.6,
+        "Inspector (components/Inspector.tsx)": 1.3,
+        "textureFor (components/Viewport.tsx)": 1.2
+      }
+    }
+  ]
+}

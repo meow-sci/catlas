@@ -1,0 +1,112 @@
+{
+  "browser": "151.0.7922.34",
+  "renderer": "Chromium SwiftShader; timings are local measurements, not hardware GPU benchmarks",
+  "reports": [
+    {
+      "scale": "compressed",
+      "body": "Mars",
+      "replacedBodies": 0,
+      "gpuCalls": {
+        "createTexture": 0,
+        "createBuffer": 0,
+        "deleteBuffer": 0,
+        "deleteTexture": 0
+      },
+      "longTasksMs": [],
+      "slowTimers": [],
+      "maxFrameGapMs": 396.3,
+      "cpuSelfMs": {
+        "animate (components/Viewport.tsx)": 1.5
+      }
+    },
+    {
+      "scale": "compressed",
+      "body": "Jupiter",
+      "replacedBodies": 0,
+      "gpuCalls": {
+        "createTexture": 0,
+        "createBuffer": 0,
+        "deleteBuffer": 0,
+        "deleteTexture": 0
+      },
+      "longTasksMs": [],
+      "slowTimers": [],
+      "maxFrameGapMs": 77.4,
+      "cpuSelfMs": {
+        "App (App.tsx)": 1.5,
+        "vector (lib/project.ts)": 0.1,
+        "vec (lib/fidelityValidation.ts)": 0
+      }
+    },
+    {
+      "scale": "compressed",
+      "body": "Luna",
+      "replacedBodies": 0,
+      "gpuCalls": {
+        "createTexture": 0,
+        "createBuffer": 0,
+        "deleteBuffer": 0,
+        "deleteTexture": 0
+      },
+      "longTasksMs": [],
+      "slowTimers": [],
+      "maxFrameGapMs": 62.9,
+      "cpuSelfMs": {
+        "validateFidelity (lib/fidelityValidation.ts)": 1.5
+      }
+    },
+    {
+      "scale": "real",
+      "body": "Mars",
+      "replacedBodies": 0,
+      "gpuCalls": {
+        "createTexture": 0,
+        "createBuffer": 0,
+        "deleteBuffer": 0,
+        "deleteTexture": 0
+      },
+      "longTasksMs": [],
+      "slowTimers": [],
+      "maxFrameGapMs": 51.7,
+      "cpuSelfMs": {
+        "animate (components/Viewport.tsx)": 1.5,
+        "validateFidelity (lib/fidelityValidation.ts)": 1.5
+      }
+    },
+    {
+      "scale": "real",
+      "body": "Jupiter",
+      "replacedBodies": 0,
+      "gpuCalls": {
+        "createTexture": 0,
+        "createBuffer": 0,
+        "deleteBuffer": 0,
+        "deleteTexture": 0
+      },
+      "longTasksMs": [],
+      "slowTimers": [],
+      "maxFrameGapMs": 51.3,
+      "cpuSelfMs": {
+        "animate (components/Viewport.tsx)": 3,
+        "bodyPosition (lib/orbits.ts)": 1.5
+      }
+    },
+    {
+      "scale": "real",
+      "body": "Luna",
+      "replacedBodies": 0,
+      "gpuCalls": {
+        "createTexture": 0,
+        "createBuffer": 0,
+        "deleteBuffer": 0,
+        "deleteTexture": 0
+      },
+      "longTasksMs": [],
+      "slowTimers": [],
+      "maxFrameGapMs": 50.9,
+      "cpuSelfMs": {
+        "animate (components/Viewport.tsx)": 3
+      }
+    }
+  ]
+}

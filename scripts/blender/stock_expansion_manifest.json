@@ -1,0 +1,362 @@
+[
+  {
+    "id": "river_boulder",
+    "name": "Riverstone boulder",
+    "description": "A compact water-worn stone with weathered mineral grain.",
+    "category": "rock",
+    "heightM": 0.8,
+    "palette": [
+      "#434847",
+      "#59605b",
+      "#656c65",
+      "#757b73",
+      "#8a8d82",
+      "#949487",
+      "#68746b",
+      "#acaa98"
+    ],
+    "metadata": {
+      "materialFamily": "basalt_spires",
+      "cutout": false
+    }
+  },
+  {
+    "id": "talus_cluster",
+    "name": "Scree talus",
+    "description": "A mixed pile of angular stones with dust-softened fracture edges.",
+    "category": "rock",
+    "heightM": 2,
+    "palette": [
+      "#605951",
+      "#777164",
+      "#858271",
+      "#969384",
+      "#aba697",
+      "#c1b9a9",
+      "#797b72",
+      "#d1cbb9"
+    ],
+    "metadata": {
+      "materialFamily": "basalt_spires",
+      "cutout": false
+    }
+  },
+  {
+    "id": "desert_arch",
+    "name": "Desert sandstone arch",
+    "description": "An asymmetric eroded sandstone arch with a genuine open span.",
+    "category": "rock",
+    "heightM": 6,
+    "palette": [
+      "#805039",
+      "#a36b49",
+      "#b27953",
+      "#be865d",
+      "#ca9368",
+      "#b9855d",
+      "#d2a578",
+      "#aa7853"
+    ],
+    "metadata": {
+      "materialFamily": "layered_sandstone",
+      "cutout": false
+    }
+  },
+  {
+    "id": "lava_pebble",
+    "name": "Vesicular lava pebble",
+    "description": "A small porous volcanic stone with modeled vesicles.",
+    "category": "rock",
+    "heightM": 0.3,
+    "palette": [
+      "#1f2527",
+      "#2e3637",
+      "#374040",
+      "#424b48",
+      "#515954",
+      "#656b60",
+      "#3b4541",
+      "#7d8173"
+    ],
+    "metadata": {
+      "materialFamily": "basalt_spires",
+      "cutout": false
+    }
+  },
+  {
+    "id": "giant_redwood",
+    "name": "Giant redwood",
+    "description": "A towering buttressed conifer with a narrow layered crown.",
+    "category": "tree",
+    "heightM": 40,
+    "palette": [
+      "#624333",
+      "#214938",
+      "#285d44",
+      "#356e4b",
+      "#477b51",
+      "#856744",
+      "#668556",
+      "#a3a885"
+    ],
+    "metadata": {
+      "materialFamily": "wind_pine",
+      "foliageStyle": "needles",
+      "cutout": true
+    }
+  },
+  {
+    "id": "dwarf_juniper",
+    "name": "Dwarf juniper",
+    "description": "A low twisted blue-green shrub with densely clustered needle shoots.",
+    "category": "tree",
+    "heightM": 1.8,
+    "palette": [
+      "#675549",
+      "#284e47",
+      "#35635a",
+      "#4b7b69",
+      "#648c76",
+      "#889aa2",
+      "#7ba28b",
+      "#a7b3a2"
+    ],
+    "metadata": {
+      "materialFamily": "wind_pine",
+      "foliageStyle": "needles",
+      "cutout": true
+    }
+  },
+  {
+    "id": "silver_birch",
+    "name": "Silver birch",
+    "description": "Pale forked trunks support a delicate crown of serrated leaves.",
+    "category": "tree",
+    "heightM": 14,
+    "palette": [
+      "#dad9cf",
+      "#587146",
+      "#72914d",
+      "#8cac5b",
+      "#a7bc78",
+      "#506c41",
+      "#bdc68c",
+      "#3c4936"
+    ],
+    "metadata": {
+      "materialFamily": "birch_bark",
+      "foliageStyle": "broadleaf",
+      "cutout": true
+    }
+  },
+  {
+    "id": "fan_palm",
+    "name": "Coastal fan palm",
+    "description": "A curved ringed trunk carries ribbed radial fan fronds.",
+    "category": "tree",
+    "heightM": 9,
+    "palette": [
+      "#725944",
+      "#285b45",
+      "#357455",
+      "#4b8b60",
+      "#71a372",
+      "#86aa65",
+      "#a6b67c",
+      "#b2a075"
+    ],
+    "metadata": {
+      "materialFamily": "umbrella_tree",
+      "cutout": false
+    }
+  },
+  {
+    "id": "spiral_succulent",
+    "name": "Spiral succulent",
+    "description": "A fleshy corkscrew rosette with overlapping waxy leaves.",
+    "category": "alien",
+    "heightM": 1.4,
+    "palette": [
+      "#294c48",
+      "#346b60",
+      "#478879",
+      "#64a18b",
+      "#86b7a0",
+      "#b0c8a9",
+      "#8771a1",
+      "#c2cdb5"
+    ],
+    "metadata": {
+      "materialFamily": "succulent",
+      "cutout": false
+    }
+  },
+  {
+    "id": "trumpet_fungus",
+    "name": "Trumpet fungus colony",
+    "description": "A small colony of fluted hollow fungal trumpets with curled rims.",
+    "category": "alien",
+    "heightM": 0.6,
+    "palette": [
+      "#594a61",
+      "#74667e",
+      "#938399",
+      "#ad9faf",
+      "#c4baca",
+      "#514259",
+      "#837063",
+      "#dad2d3"
+    ],
+    "metadata": {
+      "materialFamily": "fungus",
+      "cutout": false
+    }
+  },
+  {
+    "id": "sail_pod",
+    "name": "Sail pod",
+    "description": "Tall organic stems carry broad veined opaque sail membranes.",
+    "category": "alien",
+    "heightM": 7,
+    "palette": [
+      "#315657",
+      "#477f78",
+      "#76afa0",
+      "#9fc7b6",
+      "#c1d6bc",
+      "#cadcc9",
+      "#527b76",
+      "#ddcca3"
+    ],
+    "metadata": {
+      "materialFamily": "alien_lantern",
+      "cutout": false
+    }
+  },
+  {
+    "id": "glass_urchin",
+    "name": "Glass urchin",
+    "description": "A static radial ground creature with pale mineral-like spines.",
+    "category": "alien",
+    "heightM": 0.7,
+    "palette": [
+      "#3b5362",
+      "#6f9aab",
+      "#8cb6c4",
+      "#a8cbd2",
+      "#c2dcdf",
+      "#dfedeb",
+      "#627e91",
+      "#eceee3"
+    ],
+    "metadata": {
+      "materialFamily": "glacial_shard",
+      "cutout": false
+    }
+  },
+  {
+    "id": "shell_grazer",
+    "name": "Shell grazer",
+    "description": "A static low alien creature beneath overlapping growth-ringed shell plates.",
+    "category": "alien",
+    "heightM": 2,
+    "palette": [
+      "#554650",
+      "#837168",
+      "#a28d7a",
+      "#bfa78d",
+      "#d4bea4",
+      "#6b5761",
+      "#948184",
+      "#e4d2b8"
+    ],
+    "metadata": {
+      "materialFamily": "shell",
+      "cutout": false
+    }
+  },
+  {
+    "id": "meadow_grass",
+    "name": "Meadow grass",
+    "description": "A compact tuft of arching green grass blades.",
+    "category": "groundcover",
+    "heightM": 0.3,
+    "palette": [
+      "#49623d",
+      "#517d43",
+      "#658e4a",
+      "#7aa258",
+      "#93b66d",
+      "#b8c58a",
+      "#788b51",
+      "#cbd3a1"
+    ],
+    "metadata": {
+      "materialFamily": "grass",
+      "cutout": false
+    }
+  },
+  {
+    "id": "dry_bunchgrass",
+    "name": "Dry bunchgrass",
+    "description": "A tall straw-colored tuft with slender seed-bearing stems.",
+    "category": "groundcover",
+    "heightM": 0.7,
+    "palette": [
+      "#746246",
+      "#9a855b",
+      "#b59e6b",
+      "#c7b17d",
+      "#d4c18f",
+      "#92764d",
+      "#e0cea1",
+      "#ad9262"
+    ],
+    "metadata": {
+      "materialFamily": "grass",
+      "cutout": false
+    }
+  },
+  {
+    "id": "alien_ribbon_grass",
+    "name": "Alien ribbon grass",
+    "description": "Low curled teal blades with restrained violet edges.",
+    "category": "groundcover",
+    "heightM": 0.45,
+    "palette": [
+      "#3b4d61",
+      "#3d7b80",
+      "#529396",
+      "#71aca6",
+      "#8fc0b4",
+      "#756496",
+      "#9283ae",
+      "#b5d0c2"
+    ],
+    "metadata": {
+      "materialFamily": "alien_grass",
+      "cutout": false
+    }
+  },
+  {
+    "id": "alien_spore_mat",
+    "name": "Alien spore mat",
+    "description": "A low living cushion with fine filaments and pale spore tips.",
+    "category": "groundcover",
+    "heightM": 0.12,
+    "palette": [
+      "#3c4f4a",
+      "#4e7365",
+      "#628c79",
+      "#7ba690",
+      "#95baa1",
+      "#b9c9ab",
+      "#8a9d96",
+      "#d4ddc0"
+    ],
+    "metadata": {
+      "materialFamily": "alien_grass",
+      "cutout": false
+    }
+  }
+]

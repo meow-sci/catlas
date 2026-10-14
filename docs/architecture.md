@@ -1,0 +1,59 @@
+# Architecture
+
+Orbit Foundry is a static Vite + React + TypeScript application. Three.js renders the editor preview; JSZip packages generated assets. The browser uses no filesystem API, backend, or remote service.
+
+| Module                                                                 | Responsibility                                                                                                                                        |
+| ---------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `src/lib/types.ts`                                                     | Versioned serializable project, system, star, barycenter, planet, surface, ring, atmosphere, ocean, orbit, and rotation types.                        |
+| `src/lib/project.ts`                                                   | Starter data, constructors, safe IDs, import boundary validation, physical/hierarchy validation, and cycle-safe descendant traversal.                 |
+| `src/lib/procedural.ts`                                                | Seeded 3D noise, palettes, crater/gas/occurrence masks, and one shared surface sampler.                                                               |
+| `src/lib/assets.ts`                                                    | CPU generation of cubemap pixels/mips, KTX2 containers, PNGs, named indexed GLB rocks, and asset paths.                                               |
+| `src/lib/surface.ts`, `surfaceExport.ts`                               | Biome weights and materials, derivative normals, independent clutter geometry/material/distribution, native terrain and ecotype definitions.          |
+| `src/lib/stock-assets.ts`, `stock-meshes.json`                         | Eight original Blender assets, five LOD meshes each, palette atlases and browser/Node source lookup.                                                  |
+| `src/lib/atmosphere.ts`, `atmosphereExport.ts`, `atmospherePreview.ts` | Shared native atmosphere/cloud interpretation, original weather maps, XML and approximate display shaders.                                            |
+| `src/lib/landmarks.ts`                                                 | Named locations, original platform GLBs/material maps, matching native colliders and launch-height definitions.                                       |
+| `src/lib/sitePlacement.ts`                                             | Actual terrain intersections transformed into native latitude/longitude, including pole protection.                                                   |
+| `src/lib/clutterPreview.ts`                                            | Bounded physical terrain patch and approximate filtered placement counts for the selected clutter type.                                               |
+| `src/lib/environment.ts`                                               | Deterministic looping PCM audio and self-contained native sound assets.                                                                               |
+| `src/lib/fidelityValidation.ts`, `exportBudget.ts`                     | Strict new-field validation, native constraints, per-body resolution and bounded export estimates.                                                    |
+| `src/lib/export.ts`                                                    | Source-verified native XML, manifest, meshes/terrain/clutter definitions, path closure, progress, and ZIP.                                            |
+| `src/lib/orbits.ts`                                                    | Kepler iteration and representative hierarchy positions in Three.js coordinates.                                                                      |
+| `src/components/Viewport.tsx`                                          | Scene lifecycle, deterministic surface textures, displaced globe, atmospheric limb, rings, GLB preview, orbital paths, picking, camera fit, disposal. |
+| `src/components/Inspector.tsx`                                         | Physical/orbital/art controls bound directly to serialized settings.                                                                                  |
+| `src/App.tsx`                                                          | Selection, project history, persistence, file import/download, system/body CRUD, validation/export dialogs.                                           |
+
+The domain and generation modules are DOM-independent. PNG uses the standard CompressionStream API, available in the verified Node and Chromium versions. Export uses Blob, also available in both. React is isolated to UI modules. The launch-pad generator uses Three's DOM-independent box geometry; browser renderers and audio playback remain UI concerns. Stock geometry is imported locally with the application, without fetches or filesystem reads during export.
+
+## Coordinates and meaning
+
+Native system root positions are ecliptic Cartesian light-years: `system.position + root.position`. A root’s `position` is a local offset. Child body positions come from native orbital elements with AU distances and degree angles. Binary companions share a relative orbit, have barycentric flags, and start with 180° periapsis separation. A root barycenter obtains native mass from its immediate barycentric stellar children.
+
+The preview maps the orbital plane to Three.js XZ with Y up, applies argument of periapsis, inclination, and ascending node, and solves eccentric anomaly for animation. The default overview compresses orbital radii logarithmically so moons and distant planets remain inspectable. System view’s Real scale toggle uses one physical scale for radii, rings, orbits, and root offsets within the selected system. Both moving bodies and their orbit lines follow their parents. Native XML always preserves the uncompressed authored values. The simulation horizon is editable view state; the range and displayed time share the same value, with playback stopping at that horizon.
+
+Terrain samples are generated in unit-sphere XYZ, so cube faces meet without a 2D equirectangular seam. Preview pixels and native cube faces use the same sampler. The authoring frame is Y-up; native planet geography is Z-up. `nativeToAuthor([x,y,z]) = [x,z,-y]` is applied before sampling native cubes and equirects. The inverse is `[x,-z,y]`. Thus native +Z contains the authored north pole, and landmarks align with biome/cloud geography. The height range exports `[-seaLevel × relief, (1 − seaLevel) × relief]` in kilometers. KTX2 face order and orientation follow the loader/specification research. All generated mesh vertex transforms are baked.
+
+Native biome IDs are normalized indices, encoded as `round(index * 255 / biomeCount)`; control RGBA stores the corresponding blend weights. IDs use categorical mip selection. Weight generation compensates for the native blend exponent, and up to four regions contribute to one pixel. Clutter membership uses the same aliases and the native 32-bit mask, so the editor caps biomes at 32. Generated materials have separate ground and slope maps; authored occurrences remain color overlays.
+
+Clutter GLBs contain five genuinely different LOD meshes. Procedural shapes and Blender stock sources feed the same native geometry/material/placement exporter. Stock palette UVs span nonzero area inside one swatch for every triangle: native clutter shaders derive their tangent frame from UV derivatives, so a constant color-coordinate per triangle would produce invalid normals. Mesh scale transforms use inverse-transpose normals. Clutter is noncolliding; launch pads separately generate actual box colliders in native assembly axes +X up, +Y east, +Z north.
+
+System-view camera focus follows the selected body in the same scene coordinates as its rendered orbit. Each frame translates both the camera and its orbit-control target by the body's displacement, preserving viewing angle and zoom during playback and scrubbing. Camera reset and resizing retain the selected focus in both scale modes. System-view panning is disabled so mouse/touch navigation orbits that body; Body and Rocks views retain their own centered previews.
+
+System-view body selection reuses existing meshes, textures, and orbit lines; only line colors and camera focus change. Authored system edits and rendering options still rebuild the scene. Body/Rocks views rebuild when their selected content changes. See the [selection performance investigation](research/system-selection-performance.md) for the measured full-scene rebuild regression and its correction.
+
+Oceans are explicit per-planet settings, restricted to rocky worlds because native ocean rendering consumes the height cubemap. Ocean level is kilometers relative to mean radius, independent of the terrain datum. Enabled oceans export through `AtmosphericBody`, even when the body has no `<Atmosphere>`, and reference the generated nonempty planet mesh collection. At least one enabled ocean is required by the current native ocean renderer across the combined exported `<System>`; validation reports the absence as a warning. Ocean density is deliberately omitted to retain the native constructor default, avoiding this build’s uninitialized XML density cache.
+
+## State and persistence
+
+Projects are immutable snapshots. A commit clones the current snapshot and records one undo entry outside React state updater callbacks, avoiding duplicate history under React StrictMode. Undo/redo retains up to 40 previous committed snapshots. Browser storage is debounced; Save downloads authoring JSON. Import validates unknown data before rendering it. Temporary invalid edits remain editable and visibly block native XML/export. A new collection and system deletion are undoable operations.
+
+Version 1 imports migrate only absent fields or a valid legacy clutter singleton. Explicit malformed new fields fail validation. Old absent oceans remain disabled; cloud decks, ambient audio and location arrays are not silently added to old authored worlds. Old atmospheric coefficients retain their literal authored values. New defaults use the corrected native km⁻¹ units and include a home-world ocean, weather and an original pad placed at sampled dry terrain. View options and simulation horizon are session UI state, separate from the native authoring project.
+
+Stable identifiers become native IDs prefixed by the mod identifier. Changing an ID rewrites child parent references. Native XML is escaped, file identifiers cannot traverse paths, and every path is checked against the generated archive. The exporter creates a complete selectable collection rather than mutating shipped Core content.
+
+Native identifier hashing is case-insensitive. Validation rejects case-only duplicates in generated collections and duplicate enabled location names. The latter are actual native location IDs and matter to launch destination lookup. The export preflight estimates retained source bytes and rejects payloads above 384 MiB. Generation works sequentially by body and yields within expensive pixel loops to keep progress and browser input responsive.
+
+## Maintenance points
+
+On a game update, revisit the cited serializers and renderers in `docs/research/`, especially `AstronomicalTemplate`, `OrbitTemplate`, `PlanetaryRingsReference`, terrain material parsing, KTX loading/sampling, and ground clutter mesh/material loading. Add contract tests for changes rather than relying solely on XML well-formedness.
+
+Preview fidelity work should preserve the distinction between procedural source data, generated native asset bytes, and approximate display shaders. Existing tests establish container/graph correctness; an actual game smoke test is still needed for renderer/physics verification.
